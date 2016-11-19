@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+
+The foundations of the rigorous study of \emph{analysis}
+were laid in the nineteenth century, notably by the
+mathematicians Cauchy and Weierstrass. Central to the
+study of this subject are the formal definitions of
+\emph{limits} and \emph{continuity}.
+
+Let $D$ be a subset of $\bf R$ and let
+$f \colon D \to \mathbf{R}$ be a real-valued function on
+$D$. The function $f$ is said to be \emph{continuous} on
+$D$ if, for all $\epsilon > 0$ and for all $x \in D$,
+there exists some $\delta > 0$ (which may depend on $x$)
+such that if $y \in D$ satisfies
+\[ |y - x| < \delta \]
+then
+\[ |f(y) - f(x)| < \epsilon. \]
+
+One may readily verify that if $f$ and $g$ are continuous
+functions on $D$ then the functions $f+g$, $f-g$ and
+$f.g$ are continuous. If in addition $g$ is everywhere
+non-zero then $f/g$ is continuous.
+
+$$
+\delta(i,j)=
+\begin{cases}
+1, & \quad \text{if } i=j\\
+0, & \quad \text{otherwise}\\
+\end{cases}
+$$
+
+$$\textbf{P}(\textbf{X}_i,u)\geq0, \quad i=1,\cdots,m,u=1,\cdots,k$$
+$$\sum_{u=1}^k\textbf{P}(\textbf{X}_i,u)=1,\quad i=1,\cdots,m$$
+$$\textbf{P}(\textbf{X}_i,Y_i)$$
+%$$\textbf{P}(\textbf{X}_i,1)=\frac{e^{\textbf{\lambda} \textbf{X}_i}}{1+e^{\textbf{\lambda} \textbf{X}_i}}$$
+$$\textbf{P}(\textbf{X}_i,1)=\frac{e^{\boldsymbol\lambda^T \textbf{X}_i}}{1+e^{\boldsymbol\lambda^T \textbf{X}_i}}$$
+$$\textbf{P}(\textbf{X}_i,2)=1-\textbf{P}(\textbf{X}_i,1)$$
+$$\textbf{X}=\left(\textbf{X}_1,\cdots,\textbf{X}_m\right)$$
+$$\textbf{X}_i=\left[X_i^{(1)},\cdots,X_i^{(n)}\right]$$
+$$X_i^{(j)}$$
+$$m,\quad n,\quad k$$
+$$\{1,\cdots,k\}$$
+$$\textbf{Y}=(Y_1,\cdots,Y_m)$$
+$$Y_i=u$$
+$$k=2$$
+$$\textbf{P}:\mathbb{R}^n\to\mathbb{R}^k$$
+$$P(x\in1)P(x\in1,y\in1)=P(x\in1)P(y\in1)$$
+$$P(x\in1,y\in1)=P(x\in1)P(y\in1)$$
+$$\boldsymbol\lambda=[\lambda_1,\cdots,\lambda_n]$$
+$$\textbf{P}(\textbf{X}_i,u)=\frac{e^{\boldsymbol\lambda_u^T\textbf{X}_i}}{\sum_{v=1}^k e^{\boldsymbol\lambda_v^T\textbf{X}_i}},\quad u=1,\cdots,k$$
+$$\boldsymbol\lambda=(\boldsymbol\lambda_1,\cdots,\boldsymbol\lambda_k)$$
+$$\boldsymbol\lambda_u=\left[\lambda_u^{(1)},\cdots,\lambda_u^{(n)}\right],\quad u=1,\cdots,k$$
+$$\boldsymbol\lambda_2=\textbf{0}$$
+$$\boldsymbol\lambda_v^T\textbf{X}_i-\boldsymbol\lambda_u^T\textbf{X}_i$$
+$$\boldsymbol\lambda_v^T\textbf{X}_i>\boldsymbol\lambda_u^T\textbf{X}_i$$
+$$\boldsymbol\lambda_v^T\textbf{X}_i<\boldsymbol\lambda_u^T\textbf{X}_i$$
+$$\boldsymbol\lambda_v^T\textbf{X}_i\approx\boldsymbol\lambda_u^T\textbf{X}_i$$
+$$u\quad v$$
+$$P(\textbf{X}_1\in u_1,\cdots,\textbf{X}_m\in u_m)=\prod_{i=1}^m\textbf{P}(\textbf{X}_i,u_i)$$
+$$\prod_{i=1}^m\textbf{P}(\textbf{X}_i,Y_i)$$
+$$A$$
+$$f(\boldsymbol\lambda)=\sum_{i=1}^m \ln\textbf{P}(\textbf{X}_i,Y_i)$$
+$$\lambda_u^{(j)}$$
+$$\frac{\partial\textbf{P}(\textbf{X}_i,u)}{\partial\lambda_u^{(j)}}=X_i^{(j)}\textbf{P}(\textbf{X}_i,u)\left(1-\textbf{P}(\textbf{X}_i,u)\right)$$
+$$\frac{\partial\textbf{P}(\textbf{X}_i,u)}{\partial\lambda_v^{(j)}}=-X_i^{(j)}\textbf{P}(\textbf{X}_i,u)\textbf{P}(\textbf{X}_i,v),\quad u\neq v$$
+\begin{align}
+\frac{\partial f(\boldsymbol\lambda)}{\partial\lambda_u^{(j)}}=
+&\sum_{i=1}^m\frac{1}{\textbf{P}(\textbf{X}_i,Y_i)}\frac{\partial\textbf{P}(\textbf{X}_i,Y_i)}{\partial\lambda_u^{(j)}}\\=
+&\sum_{i=1}^m\frac{\delta(u,Y_i)}{\textbf{P}(\textbf{X}_i,u)}X_i^{(j)}\textbf{P}(\textbf{X}_i,u)\left(1-\textbf{P}(\textbf{X}_i,u)\right)\\
+&-\sum_{i=1}^m\frac{1-\delta(u,Y_i)}{\textbf{P}(\textbf{X}_i,Y_i)}X_i^{(j)}\textbf{P}(\textbf{X}_i,Y_i)\textbf{P}(\textbf{X}_i,u)\\=
+&\sum_{i=1}^m X_i^{(j)}\left[\delta(u,Y_i)-\textbf{P}(\textbf{X}_i,u)\right]
+\end{align}
+$$\sum_{i=1}^m X_i^{(j)}\delta(u,Y_i)=\sum_{i=1}^m X_i^{(j)}\textbf{P}(\textbf{X}_i,u),\quad j=1,\cdots,n,u=1,\cdots,k$$
+$$Y_{i'}=u$$
+$$j$$
+$$\lambda_u^{(j)}\gets\lambda_u^{(j)}+h\frac{\partial f(\boldsymbol\lambda)}{\partial\lambda_u^{(j)}}$$
+$$\textbf{K}=[1,\cdots,k]$$
+$$\boldsymbol\delta(\textbf{Y},\textbf{K})=\left(\delta(Y_i,u)\right)_{i=1,u=1}^{m,k}$$
+$$\textbf{P}(\textbf{X},\textbf{K})=\left(\textbf{P}(\textbf{X}_i,u)\right)_{i=1,u=1}^{m,k}$$
+$$\boldsymbol\lambda\gets\boldsymbol\lambda+h\textbf{X}\left[\boldsymbol\delta(\textbf{Y},\textbf{K})-\textbf{P}(\textbf{X},\textbf{K})\right]$$
+
+$$\textbf{P}(\textbf{X}_i,u)=\frac{1}{\sum_{v=1}^k e^{\left(\boldsymbol\lambda_v-\boldsymbol\lambda_u\right)^T\textbf{X}_i}},\quad u=1,\cdots,k$$
+
+$$i\quad j\quad \mathbb{R}^{n\times k}$$
+
+\begin{align}
+\frac{\partial^2 f(\boldsymbol\lambda)}{\partial\left[\lambda_u^{(j)}\right]^2}=
+&-\sum_{i=1}^m X_i^{(j)}\frac{\partial\textbf{P}(\textbf{X}_i,u)}{\partial\lambda_u^{(j)}}\\=
+&-\sum_{i=1}^m\left[X_i^{(j)}\right]^2\textbf{P}(\textbf{X}_i,u)(1-\textbf{P}(\textbf{X}_i,u))
+\end{align}
+
+$$H(\textbf{P}) = -\sum_{u=1}^k\sum_{i=1}^m\textbf{P}(\textbf{X}_i,u)\ln\textbf{P}(\textbf{X}_i,u)$$
+
+$$\textbf{X}^{(j)}\neq\textbf{0}$$
+
+$$\sum_{i=1}^m \textbf{X}_i\delta(u,Y_i)=\sum_{i=1}^m\textbf{X}_i\textbf{P}(\textbf{X}_i,u),\quad u=1,\cdots,k$$
+
+$$\beta_i$$
+
+$$L=\sum_{i=1}^m\sum_{u=1}^k\left[\boldsymbol\lambda_u^T\textbf{X}_i\textbf{P}(\textbf{X}_i,u)+\beta_i\textbf{P}(\textbf{X}_i,u)-\textbf{P}(\textbf{X}_i,u)\ln\textbf{P}(\textbf{X}_i,u)\right]$$
+
+$$\frac{\partial L}{\partial\textbf{P}(\textbf{X}_i,u)}=\boldsymbol\lambda_u^T\textbf{X}_i+\beta_i-\ln\textbf{P}(\textbf{X}_i,u)-1$$
+
+$$\textbf{P}(\textbf{X}_i,u)=e^{\beta_i-1}e^{\boldsymbol\lambda_u^T\textbf{X}_i}$$
+
+$$e^{\beta_i-1}=\frac{1}{\sum_{u=1}^ke^{\boldsymbol\lambda_u^T\textbf{X}_i}}$$
+\end{document}
